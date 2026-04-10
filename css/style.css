@@ -1,0 +1,39 @@
+@import url('base.css');
+@import url('layout.css');
+@import url('components.css');
+
+@import url('./pages/home.css');
+@import url('./pages/about.css');
+@import url('./pages/practice-areas.css');
+@import url('./pages/blog.css');
+@import url('./pages/category.css');
+@import url('./pages/article.css');
+@import url('./pages/contact.css');
+
+
+
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .about-hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 220px;
+    }
+}

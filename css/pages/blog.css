@@ -1,0 +1,34 @@
+.blog-categories {
+    padding: 60px 0;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.blog-card {
+    display: block;
+    padding: 30px;
+    border: 1px solid var(--border-light);
+    background: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.blog-card h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.blog-card p {
+    color: #555;
+    font-size: 14px;
+}
+
+.blog-card:hover {
+    border-color: var(--secondary);
+    transform: translateY(-5px);
+}

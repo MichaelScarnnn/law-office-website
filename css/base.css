@@ -1,0 +1,36 @@
+:root {
+    --primary: #0b1c2c;
+    --secondary: #c8a96a;
+    --text-light: #ffffff;
+    --text-dark: #222;
+    --bg-light: #f4f4f4;
+    --border-light: #e0e0e0;
+}
+
+/* ===================== RESET ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
