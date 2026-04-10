@@ -127,10 +127,6 @@
     color: var(--secondary);
 }
 
-.footer-column-connections {
-    text-align: center;
-}
-
 .footer-bottom {
     border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: 15px;
