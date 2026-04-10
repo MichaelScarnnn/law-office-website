@@ -1,8 +1,8 @@
-// const params = new URLSearchParams(window.location.search);
-// const slug = params.get("slug");
+const params = new URLSearchParams(window.location.search);
+let slug = params.get("slug");
 
-const path = window.location.pathname;
-const slug = path.replace("/blog/", "")
+// const path = window.location.pathname;
+// const slug = path.replace("/blog/", "")
 
 const titleEl = document.getElementById("article-title");
 const dateEl = document.getElementById("article-date");
@@ -11,6 +11,17 @@ const contentEl = document.getElementById("article-content");
 fetch("data/articles.json")
     .then(res => res.json())
     .then(data => {
+
+        // Eğer query yoksa (yeni sistem)
+        if (!slug) {
+            const path = window.location.pathname;
+            slug = path.replace("/blog/", "");
+        }
+
+        // sondaki slash temizle
+        //slug = slug.replace(/\/$/, "");
+
+        console.log('Slug:', slug)
 
         const article = data.find(a => a.slug === slug);
 
