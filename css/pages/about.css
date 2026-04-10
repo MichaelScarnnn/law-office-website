@@ -1,6 +1,6 @@
 /* ===================== ABOUT HERO ===================== */
 .about-hero {
-    padding: 20px 0;
+    padding: 40px 0;
     position: relative;
     background: var(--bg-light);
 }
@@ -22,7 +22,7 @@
 }
 
 .about-image img {
-    width: 220px;
+    width: 240px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
