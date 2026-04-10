@@ -19,7 +19,8 @@ fetch("data/articles.json")
         }
 
         // sondaki slash temizle
-        //slug = slug.replace(/\/$/, "");
+        slug = slug.replace(/\/$/, "");
+        slug = slug.trim();
 
         console.log('Slug:', slug)
 

@@ -32,14 +32,31 @@ fetch("data/articles.json")
         let html = "";
 
         filtered.forEach(article => {
+
+            const isLocal = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost";
+
+            const url = isLocal
+                ? `article.html?slug=${article.slug}`
+                : `/blog/${article.slug}`;
+
             html += `
-                <a href="article.html?slug=${article.slug}" class="article-card">
+                <a href="${url}" class="article-card">
                     <p class="category-article-date">${article.date}</p>
                     <h3>${article.title}</h3>
                     <p>${article.summary}</p>
                 </a>
             `;
         });
+
+        // filtered.forEach(article => {
+        //     html += `
+        //         <a href="/blog/${article.slug}" class="article-card">
+        //             <p class="category-article-date">${article.date}</p>
+        //             <h3>${article.title}</h3>
+        //             <p>${article.summary}</p>
+        //         </a>
+        //     `;
+        // });
 
         container.innerHTML = html;
 
