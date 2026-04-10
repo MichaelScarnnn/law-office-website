@@ -73,6 +73,14 @@
     width: 100%;
 }
 
+/* ===================== HAMBURGER ===================== */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: var(--text-light);
+    cursor: pointer;
+}
+
 /* ===================== FOOTER ===================== */
 .site-footer {
     background: var(--primary);
