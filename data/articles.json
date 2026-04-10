@@ -5,7 +5,7 @@
     "category": "is-hukuku",
     "summary": "İşten çıkarılan işçinin işe geri dönmesini sağlayan dava türüdür.",
     "date": "08.04.2026",
-    "slug": "ise-iade-davasi",
+    "slug": "is-hukuku/ise-iade-davasi",
     "content": "<p>İşe iade davası, iş sözleşmesi haksız şekilde feshedilen işçinin tekrar işe alınmasını talep ettiği bir dava türüdür.</p><h2>Şartlar</h2><p>İşçinin belirli şartları sağlaması gerekir...</p>"
   },
   {
@@ -13,7 +13,7 @@
     "title": "Tutuklamaya İtiraz Nasıl Yapılır?",
     "category": "ceza-hukuku",
     "summary": "Tutuklama kararına karşı başvurulabilecek hukuki yolları açıklar.",
-    "slug": "tutuklama-itiraz",
+    "slug": "ceza-hukuku/tutuklama-itiraz",
     "date": "08.04.2026"
   }
 ]
