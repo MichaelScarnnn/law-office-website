@@ -8,7 +8,7 @@ const titleEl = document.getElementById("article-title");
 const dateEl = document.getElementById("article-date");
 const contentEl = document.getElementById("article-content");
 
-fetch("data/articles.json")
+fetch("/data/articles.json")
     .then(res => res.json())
     .then(data => {
 

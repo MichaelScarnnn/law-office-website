@@ -16,7 +16,7 @@ const container = document.getElementById("articles-container");
 titleEl.innerText = titleMap[category] || "Makaleler";
 
 // JSON çek
-fetch("data/articles.json")
+fetch("/data/articles.json")
     .then(res => res.json())
     .then(data => {
 
