@@ -39,8 +39,19 @@ fetch("/data/articles.json")
         // content HTML olarak basılır
         contentEl.innerHTML = article.content;
 
-        // SEO title (küçük ama önemli)
+        // SEO title 
         document.title = article.title + " | İsmail Karadağ";
+
+        // SEO meta description
+        document.querySelector("meta[name='description']")
+            .setAttribute("content", article.summary);
+
+        // CANONICAL
+        document.querySelector("link[rel='canonical']")
+            .setAttribute("href", window.location.href)
+
+        document.querySelector("meta[property='og:title']")
+            .setAttribute("content", article.title);
 
     })
     .catch(err => {
