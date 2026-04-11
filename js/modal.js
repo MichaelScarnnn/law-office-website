@@ -8,6 +8,9 @@ function openLegal(page) {
         .then(data => {
             modalBody.innerHTML = data;
             modal.classList.add("active");
+            
+            // 🔥 SCROLL RESET
+            document.querySelector(".modal-content").scrollTop = 0;
         })
         .catch(() => {
             modalBody.innerHTML = "<p>İçerik yüklenemedi.</p>";
