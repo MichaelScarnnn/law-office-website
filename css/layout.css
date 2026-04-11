@@ -136,9 +136,134 @@
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 15px;
-    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    flex-wrap: wrap;
+}
+
+.footer-bottom-left p {
     font-size: 13px;
     color: #aaa;
+}
+
+.footer-bottom-right {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-link {
+    font-size: 13px;
+    color: #aaa;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    color: var(--secondary);
+}
+
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    /* background: rgba(0,0,0,0.6); */
+    background: rgba(11, 28, 44, 0.85);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    background: var(--primary);
+    color: var(--text-light);
+    padding: 30px 30px;
+    border-radius: 6px;
+    max-width: 800px;
+    width: 90%;
+    border: 1px solid var(--secondary);
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* SCROLL BAR (optional premium touch) */
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+    background: var(--secondary);
+}
+
+.modal-close {
+    position: sticky;
+    top: 0;
+    float: right;
+    cursor: pointer;
+    font-size: 22px;
+    color: var(--text-light);
+    z-index: 10;
+}
+
+.modal-close:hover {
+    color: var(--secondary);
+}
+
+/* MODAL CONTENT */
+.legal-content {
+    margin-top: 10px;
+}
+
+.legal-content h2 {
+    margin-bottom: 20px;
+    color: var(--secondary);
+}
+
+.legal-content h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: var(--secondary);
+    font-size: 16px;
+}
+
+.legal-content p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: var(--text-light);
+}
+
+.legal-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.legal-content li {
+    margin-bottom: 8px;
+    color: var(--text-light);
+}
+
+/* 🔥 HIGHLIGHT BOX */
+.legal-box {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid var(--secondary);
+    background: rgba(200,169,106,0.08);
+    border-left: 4px solid var(--secondary);
+    font-size: 16px;
+}
+
+.legal-box h3 {
+    margin-top: 6px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    color: var(--text-light);
 }

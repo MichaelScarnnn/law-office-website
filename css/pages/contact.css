@@ -64,6 +64,16 @@
     color: var(--primary);
 }
 
+/* KVKK-CHECKBOX */
+.kvkk-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #666;
+    margin-top: 10px;
+}
+
 /* ===================== FORM POPUP ===================== */
 /* BASE POPUP */
 .form-popup {
