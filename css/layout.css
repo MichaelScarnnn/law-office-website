@@ -258,7 +258,7 @@
     border: 1px solid var(--secondary);
     background: rgba(200,169,106,0.08);
     border-left: 4px solid var(--secondary);
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .legal-box h3 {
