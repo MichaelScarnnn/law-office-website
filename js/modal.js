@@ -8,6 +8,9 @@ function openLegal(page) {
         .then(data => {
             modalBody.innerHTML = data;
             modal.classList.add("active");
+
+            // 🔥 BODY SCROLL KAPAT
+            document.body.classList.add("modal-open");
             
             // 🔥 SCROLL RESET
             document.querySelector(".modal-content").scrollTop = 0;
@@ -17,6 +20,15 @@ function openLegal(page) {
             modal.classList.add("active");
         });
 }
+
+function closeModal() {
+    modal.classList.remove("active");
+
+    // 🔥 BODY SCROLL GERİ AÇ
+    document.body.classList.remove("modal-open");
+}
+
+closeBtn.addEventListener("click", closeModal);
 
 // footer linkleri
 document.getElementById("kvkk-btn").addEventListener("click", (e) => {

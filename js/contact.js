@@ -38,5 +38,9 @@ document.addEventListener("DOMContentLoaded", function() {
             showPopup(errorPopup);
         });
     });
+});
 
+document.getElementById("kvkk-link").addEventListener("click", function(e) {
+    e.preventDefault(); // 🔥 KRİTİK
+    openLegal("kvkk");
 });
