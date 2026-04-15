@@ -2,15 +2,21 @@ const modal = document.getElementById("legal-modal");
 const modalBody = document.getElementById("modal-body");
 const closeBtn = document.querySelector(".modal-close");
 
+let scrollY = 0;
+
 function openLegal(page) {
+
+    scrollY = window.scrollY; // mevcut scroll u kaydetmek
+
     fetch(`/legal/${page}.html`)
         .then(res => res.text())
         .then(data => {
             modalBody.innerHTML = data;
             modal.classList.add("active");
 
-            // 🔥 BODY SCROLL KAPAT
-            document.body.classList.add("modal-open");
+            document.body.style.position = "fixed";
+            document.body.style.top = `-${scrollY}px`;
+            document.body.style.width = "100%";
             
             // 🔥 SCROLL RESET
             document.querySelector(".modal-content").scrollTop = 0;
@@ -24,8 +30,13 @@ function openLegal(page) {
 function closeModal() {
     modal.classList.remove("active");
 
-    // 🔥 BODY SCROLL GERİ AÇ
-    document.body.classList.remove("modal-open");
+    // 🔥 BODY SCROLL eski haline getirmek
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.width = "";
+
+    // scroll u geri yuklemek
+    window.scrollTo(0, scrollY);
 }
 
 closeBtn.addEventListener("click", closeModal);
@@ -40,12 +51,6 @@ document.getElementById("privacy-btn").addEventListener("click", (e) => {
     e.preventDefault();
     openLegal("privacy");
 });
-
-// kapatma
-closeBtn.addEventListener("click", () => {
-    modal.classList.remove("active");
-});
-
 
 
 // const kvkkBtn = document.getElementById("kvkk-btn");
