@@ -54,7 +54,13 @@
     
 }
 
-.about-text-container {
+/* .about-text-container {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+} */
+
+.about-text-header {
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -65,6 +71,7 @@
     color: #555;
     line-height: 1.8;
     margin: 3% 15%;
+    text-align: justify;
 }
 
 /* ===================== PRINCIPLES ===================== */
