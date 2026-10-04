@@ -13,7 +13,7 @@
 }
 
 .about-hero-container {
-    width: 70%;
+    width: 60%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,7 +22,7 @@
 }
 
 .about-image img {
-    width: 240px;
+    width: 220px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
